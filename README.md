@@ -30,9 +30,13 @@ If you'd rather build the kernel yourself and enable Wireguard that way, follow 
 
 Download:
 
-[Driver Package (BSP)](https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.1/release/Jetson_Linux_R39.2.1_aarch64.tbz2)
-[Sample Root Filesystem](https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.1/release/Tegra_Linux_Sample-Root-Filesystem_R39.2.1_aarch64.tbz2)
-[Driver Package (BSP) Sources](https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.1/sources/public_sources.tbz2)
+| Package Name                 | Download URL                                                                                                                         |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| Driver Package (BSP)         | https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.1/release/Jetson_Linux_R39.2.1_aarch64.tbz2                       |
+| Sample Root Filesystem       | https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.1/release/Tegra_Linux_Sample-Root-Filesystem_R39.2.1_aarch64.tbz2 |
+| Driver Package (BSP) Sources | https://developer.nvidia.com/downloads/embedded/L4T/r39_Release_v2.1/sources/public_sources.tbz2                                     |
+
+Note: If this hasn't been updated for the latest version of Jetson/Jetpack, you can always find the latest version, including the required packages, here: https://developer.nvidia.com/embedded/jetpack/downloads. The packages are further down on the page in the second table with the same names as in the preceding table here (Driver Package (BSP), and so on...)
 
 Unzip BSP then the sample root filesystem:
 ```
