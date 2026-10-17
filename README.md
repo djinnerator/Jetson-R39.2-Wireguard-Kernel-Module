@@ -12,6 +12,8 @@ You could also use this (note, with Jetson R39.x, the kernel name (uname -r) is 
 
 ### Quick Setup
 
+You can either run the `install_modules.sh` script or run the commands manually:
+
 ```
 sudo mkdir /lib/modules/$(uname -r)/kernel/drivers/net/wireguard/
 sudo cp lib/modules/kernel-noble/drivers/net/wireguard/wireguard.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireguard/
@@ -26,7 +28,9 @@ Enjoy!
 
 ### Manual install
 
-If you'd rather build the kernel yourself and enable Wireguard that way, follow these steps (anywhere you see R39.2.1, change to the version you're using):
+If you'd rather build the kernel yourself and enable Wireguard that way, follow these steps (anywhere you see R39.2.1, change to the version you're using), or you can run the `build_and_install.sh` script which performs the same operations:
+
+(Note: If using the script, it can take one argument, `-q` or `--quiet`, which will suppress printing output to console. Default behavior is to print output to console.)
 
 Download:
 
