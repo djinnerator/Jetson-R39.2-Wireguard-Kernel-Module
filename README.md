@@ -14,9 +14,9 @@ You could also use this (note, with Jetson R39.x, the kernel name (uname -r) is 
 
 ```
 sudo mkdir /lib/modules/$(uname -r)/kernel/drivers/net/wireguard/
-sudo cp kernel/kernel-noble/drivers/net/wireguard/wireguard.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireguard/
-sudo cp kernel/kernel-noble/lib/crypto/libchacha20poly1305.ko /lib/modules/$(uname -r)/kernel/lib/crypto/
-sudo cp kernel/kernel-noble/arch/arm64/crypto/poly1305-neon.ko /lib/modules/$(uname -r)/kernel/arch/arm64/crypto/
+sudo cp lib/modules/kernel-noble/drivers/net/wireguard/wireguard.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireguard/
+sudo cp lib/modules/kernel-noble/lib/crypto/libchacha20poly1305.ko /lib/modules/$(uname -r)/kernel/lib/crypto/
+sudo cp lib/modules/kernel-noble/arch/arm64/crypto/poly1305-neon.ko /lib/modules/$(uname -r)/kernel/arch/arm64/crypto/
 sudo depmod -a
 sudo modprobe wireguard
 sudo apt update && sudo apt install wireguard-tools
@@ -68,7 +68,16 @@ Build kernel (this step takes a LONG time if ran on-device):
 make -C kernel
 ```
 
-When the kernel is done being built, run the commands in Quick Setup.
+When the kernel is done being built, run the commands in Quick Setup but with a slight change:
+
+Instead of using cp on `lib/modules/kernel/...`, you will be using it on `kernel/...`
+For example:
+
+```
+sudo mkdir /lib/modules/$(uname -r)/kernel/drivers/net/wireguard/
+sudo cp kernel/kernel-noble/drivers/net/wireguard/wireguard.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireguard/
+...
+```
 
 ### Thank You!
 Huge thanks to the blog post by Toshihito Kikuchi - https://docs.kinesis.network/blog/enable-wireguard-on-nvidia-jetson - which this is based on. The steps are identical but this repo is to provide the completed module, and requisite modules, to get Wireguard working on Jetson devices without needing to put so much time into building the kernel and copying three files.
