@@ -70,6 +70,7 @@ make -C kernel
 
 When the kernel is done being built, run the commands in Quick Setup.
 
+### Thank You!
 Huge thanks to the blog post by Toshihito Kikuchi - https://docs.kinesis.network/blog/enable-wireguard-on-nvidia-jetson - which this is based on. The steps are identical but this repo is to provide the completed module, and requisite modules, to get Wireguard working on Jetson devices without needing to put so much time into building the kernel and copying three files.
 
 I may or may not keep this repo updated as newer versions of Jetson/Jetpack releases, but if I ever have to update my own Jetson devices, I'll be sure to update this repo so others can quickly get Wireguard working.
