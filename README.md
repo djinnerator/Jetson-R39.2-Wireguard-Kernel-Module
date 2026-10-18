@@ -8,7 +8,7 @@ You could also build it yourself, it just takes about an hour to build the kerne
 
 To install the module, clone the repo and copy the .ko files to your root filesystem following the exact same directory path.
 
-You could also use this (note, with Jetson R39.x, the kernel name (uname -r) is `6.8.12-1021-tegra`. On a matching system, you can either replace $(uname -r) with your kernel version, in this case`6.8.12-1021-tegra` or just leave the commands as is and copy/paste):
+You could also use this (note, with Jetson R39.x, the kernel release version (uname -r) is `6.8.12-1021-tegra`. On a matching system, you can either replace $(uname -r) with your kernel release version, in this case`6.8.12-1021-tegra`, or you could change the kernel source name to match yours, in this case `kernel-noble`...or just leave the commands as is and copy/paste):
 
 ### Quick Setup
 
@@ -74,7 +74,8 @@ make -C kernel
 
 When the kernel is done being built, run the commands in Quick Setup but with a slight change:
 
-Instead of using cp on `lib/modules/kernel/...`, you will be using it on `kernel/...`
+Instead of using cp on `lib/modules/kernel-noble/...`, you will be using it on `kernel/kernel-noble/...` or whatever your matching kernel source name.
+
 For example:
 
 ```
